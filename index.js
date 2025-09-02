@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ConfirmDialog from './chp04/ConfirmDialog'
-import './chp04/Button.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

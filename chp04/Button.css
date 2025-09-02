@@ -12,10 +12,10 @@ button {
 
 .bg-red {
     background-color: #f13583;
-    border: 3px ridge #ffff4c;
+    border: 3px dotted #ffff4c;
 }
 
 .bg-blue {
     background-color: #3085f4;
-    border: 3px ridge #ffff4c;
+    border: 3px solid #ffff4c;
 }

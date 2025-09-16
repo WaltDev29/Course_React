@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import BookList from "./chp05/exam02/BookList";
+import CommentList from "./chp05/CommentList";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <BookList/>
+            <CommentList />
         </React.StrictMode>
     );
 

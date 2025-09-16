@@ -47,11 +47,9 @@ const Author = styled.span`
 function Book(props) {
     return (
         <Wrap className="wrapper">
-            <div>
                 <BookImg className="image"
                     src={props.image}
                     alt={props.title}/>
-            </div>
             <BookContent className="contentContainer">
                 <Title>{props.title}</Title>
                 <Author>{props.author}</Author>

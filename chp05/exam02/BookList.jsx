@@ -11,7 +11,7 @@ const Wrapper = styled.div`
         grid-template-columns: repeat(2, 1fr);
     }
     
-    @media (max-width: 580px) {
+    @media (max-width: 600px) {
         grid-template-columns: repeat(1, 1fr);
     }
 `;
@@ -47,6 +47,17 @@ function BookList() {
                         image={book.image}
                       />
                   )
+                })
+            }
+            {
+                books.map((book) => {
+                    return (
+                        <Book
+                            title={book.title}
+                            author={book.author}
+                            image={book.image}
+                        />
+                    )
                 })
             }
         </Wrapper>

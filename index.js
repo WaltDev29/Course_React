@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Counter from './chp07/Counter'
+import Accommodate from "./chp07/Accommodate";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <Counter/>
+            <Accommodate/>
         </React.StrictMode>
     );
 

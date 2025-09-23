@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import NotificationList from "./chp06/NotificationList";
+import Counter from './chp07/Counter'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <NotificationList/>
+            <Counter/>
         </React.StrictMode>
     );
 

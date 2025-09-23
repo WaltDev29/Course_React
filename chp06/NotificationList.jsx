@@ -1,4 +1,5 @@
 import React from "react";
+import Notification from "./Notification";
 
 const reservedNotifications = [
     {
@@ -14,7 +15,7 @@ const reservedNotifications = [
         message: "우산 잘 챙기세요!"
     }
 ]
-
+var timer;
 class NotificationList extends React.Component {
     constructor(props) {
         super(props);
@@ -26,15 +27,37 @@ class NotificationList extends React.Component {
 
     componentDidMount() {
         const {notifications} = this.state;
+
+        timer = setInterval(()=> {
+            if (notifications.length < reservedNotifications.length) {
+                const index = notifications.length;
+                notifications.push(reservedNotifications[index])
+                this.setState({notifications : notifications})
+            } else {
+                this.setState({notifications : []})
+                clearInterval(timer);
+            }
+        }, 2000)
     }
 
     componentWillUnmount() {
+        if (timer) {
+            clearInterval(timer);
+        }
     }
 
     render() {
         return (
           <div>
-
+              {
+                  this.state.notifications.map((notificantion) => {
+                      return <Notification
+                            key={notificantion.id}
+                            id={notificantion.id}
+                            message={notificantion.message}
+                      />
+                  })
+              }
           </div>
         );
     }

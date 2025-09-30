@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Toggle_1 from "./chp08/Toggle_1"
+import Toggle_2 from "./chp08/Toggle_2"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <Toggle_1 />
+            <Toggle_2 />
         </React.StrictMode>
     );
 

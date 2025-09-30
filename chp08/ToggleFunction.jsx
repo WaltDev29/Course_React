@@ -11,8 +11,13 @@ const Button = styled.button`
 function ToggleFunction() {
     // Hook (클래스형 컴포넌트의 State와 같은 역할)
     const[isToggleOn, setIsToggleOn] = useState(true);
+    // 1. Handler를 함수로 정의
+    // function handleClick() {
+    //     setIsToggleOn((isToggleOn) => !isToggleOn);
+    // }
 
-    function handleClick() {
+    // 2. 상수를 선언하고 상수에 익명함수를 대입
+    const handleClick = () => {
         setIsToggleOn((isToggleOn) => !isToggleOn);
     }
 

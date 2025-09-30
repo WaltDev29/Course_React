@@ -3,15 +3,15 @@ import React, {useState} from "react";
 function ConfirmButton() {
     const [isConfirmed, setIsConfirmed] = useState(false);
 
-    function handleConfirm() {
-        setIsConfirmed((prevState) => !prevState);
-    }
+    // function handleConfirm() {
+    //     setIsConfirmed((prevState) => !prevState);
+    // }
 
     return (
         <div>
             <p>{isConfirmed ? "확인됨" : "확인하기"}</p>
             <button
-                onClick={handleConfirm}
+                onClick={() => setIsConfirmed(prev => !prev)}
                 disabled={isConfirmed}
             >
                 {isConfirmed ? "확인됨" : "확인하기"}

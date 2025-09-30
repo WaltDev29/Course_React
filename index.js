@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ToggleFunction from "./chp08/ToggleFunction";
+import Assign from "./chp08/Assign";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <ToggleFunction />
+            <Assign/>
         </React.StrictMode>
     );
 

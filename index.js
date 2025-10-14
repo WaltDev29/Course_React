@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MainPage from "./chp09/exam03/MainPage";
-import "./chp09/exam03/MainPage.css"
+import LandingPage from "./chp09/exam04/LandingPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <MainPage/>
+            <LandingPage/>
         </React.StrictMode>
     );
 

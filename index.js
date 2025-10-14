@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ConfirmButton from "./chp08/ConfirmButton";
+import Greeting from "./chp09/exam01/Greeting";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <ConfirmButton/>
+            <Greeting/>
         </React.StrictMode>
     );
 

@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import LogInControl from "./chp09/exam02/LogInControl";
+import MainPage from "./chp09/exam03/MainPage";
+import "./chp09/exam03/MainPage.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
     root.render(
         <React.StrictMode>
-            <LogInControl/>
+            <MainPage/>
         </React.StrictMode>
     );
 

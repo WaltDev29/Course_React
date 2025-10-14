@@ -9,8 +9,8 @@ function GuestGreeting(props) {
 }
 
 function Greeting(props) {
-    // const isLoggedIn = props.isLoggedIn
-    const isLoggedIn = true;
+    const isLoggedIn = props.isLoggedIn
+    // const isLoggedIn = true;
 
     return isLoggedIn ? <UserGreeting/> : <GuestGreeting/>;
 }

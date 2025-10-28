@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AttendanceCard from "./chp10/exam03/AttendanceCard";
+import Lab from "./chp10/lab/Lab";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <AttendanceCard/>
+        <Lab/>
     </React.StrictMode>
 );
 

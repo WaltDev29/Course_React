@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import StudentAttendance from "./chp10/StudentAttendance";
+import StudentAttendance from "./chp10/exam02/StudentAttendance";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

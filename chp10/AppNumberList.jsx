@@ -14,7 +14,7 @@ function AppNumberList() {
 function NumberList(props) {
     const {numbers} = props;
 
-    const listItems = numbers.map(num => <li>{num}</li>)
+    const listItems = numbers.map(num => <li key={num}>{num}</li>)
 
     return (
         <ul>{listItems}</ul>

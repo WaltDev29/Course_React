@@ -27,6 +27,21 @@ const songs = [
         name: "ブレーメン",
         url: "https://youtu.be/oy6MDr6I6rM?si=TVaNA9VpUVqHGw9C",
         releasedAt: "2022.07.04"
+    },
+    {
+        name: "言って",
+        url: "https://youtu.be/F64yFFnZfkI?si=oFuTeVzc-tjmtQYo",
+        releasedAt: "2017.06.28"
+    },
+    {
+        name: "テレパス",
+        url: "https://youtu.be/LTeROfwwtnA?si=wBq5V21OdHMqb8F8",
+        releasedAt: "2023.01.12"
+    },
+    {
+        name: "都落ち",
+        url: "https://youtu.be/pHdJmDFYqTU?si=521axUDzPcDxDs_L",
+        releasedAt: "2023.04.05"
     }
 ];
 

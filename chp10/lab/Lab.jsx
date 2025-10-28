@@ -121,7 +121,6 @@ const Date = styled.p`
   text-align: center;
 `;
 
-// ✅ 컴포넌트
 function Lab() {
     return (
         <Container>

@@ -2,16 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MainPage from "./chp09/exam03/MainPage";
-import LandingPage from "./chp09/exam04/LandingPage";
+import NumberList from "./chp10/NumberList";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-    root.render(
-        <React.StrictMode>
-            <LandingPage/>
-        </React.StrictMode>
-    );
+root.render(
+    <React.StrictMode>
+        <NumberList numbers={[1,2,3,4,5]}/>
+    </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

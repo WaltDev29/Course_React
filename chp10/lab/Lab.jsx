@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-// ✅ 데이터
 const songs = [
     {
         name: "修羅",

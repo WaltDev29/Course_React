@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import NameForm from "./chp11/exam01/NameForm";
+import FruitSelect from "./chp11/exam02/FruitSelect";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <NameForm/>
+        <FruitSelect/>
     </React.StrictMode>
 );
 

@@ -16,7 +16,7 @@ export default function ConfirmBoilVerdict () {
             <fieldset className="boil-fieldset">
                 <legend>섭씨 온도를 입력하세요.</legend>
                 <input
-                    type="unmber"
+                    type="number"
                     value={temperature}
                     onChange={handleTemperature}
                     className="temperature-input"

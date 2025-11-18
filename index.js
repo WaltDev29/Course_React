@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import FruitSelect from "./chp11/exam02/FruitSelect";
+import ConfirmBoilVerdict from "./chp12/exam01/ConfirmBoilVerdict";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <FruitSelect/>
+        <ConfirmBoilVerdict/>
     </React.StrictMode>
 );
 

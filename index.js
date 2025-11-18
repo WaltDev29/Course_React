@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ConfirmBoilVerdict from "./chp12/exam01/ConfirmBoilVerdict";
+import DistanceConverter from "./chp12/exam02/DistanceConverter";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <ConfirmBoilVerdict/>
+        <DistanceConverter/>
     </React.StrictMode>
 );
 

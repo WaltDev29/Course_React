@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Calculator from "./chp12/exam03/Calculator";
-import "./chp12/exam03/Calculator.css";
+import WelcomeDialog from "./chp13/WelcomeDialog";
+import "./chp13/WelcomeDialog.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Calculator/>
+        <WelcomeDialog/>
     </React.StrictMode>
 );
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {useNavigate} from "react-router-dom";
 
 const Card = styled.article`
     display: flex;
@@ -47,14 +48,16 @@ const Img = styled.img`
     height: 100%;
 `;
 
-export default function FishCard({name, imgSrc}) {
+export default function FishCard({fish}) {
+    const navigate = useNavigate();
+
     return (
-        <Card>
+        <Card onClick={() => navigate("/fishInfo", {state : fish})}>
             <Head>
-                <Label>{name}</Label>
+                <Label>{fish.name}</Label>
                 <StarBox/>
             </Head>
-            <Img src={imgSrc} alt={name}/>
+            <Img src={`/imgs/aquamate/${fish.img}`} alt={fish.name}/>
         </Card>
     )
 }

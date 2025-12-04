@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
-import Layout from "../Components/Layout";
-import DictionarySearch from "../Components/DictionarySearch";
+import Layout from "../Components/layout/Layout";
+import DictionarySearch from "../Components/dictionaryPage/DictionarySearch";
 import styled from "styled-components";
-import FishCard from "../Components/FishCard";
+import FishCard from "../Components/dictionaryPage/FishCard";
+import Gradient from "../Components/layout/Gradient";
 
 const Container = styled.div`
     width: 100%;
@@ -11,18 +12,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-`;
-
-const GradientTop = styled.div`
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 1) 100%);
-    width: 100%;
-    height: 100px;
-`;
-
-const GradientBottom = styled.div`
-    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 1) 100%);
-    width: 100%;
-    height: 50px;
 `;
 
 const TypeNav = styled.nav`
@@ -74,37 +63,35 @@ export default function DictionaryPage() {
         loadData();
     }, []);
 
-    // todo 검색 기능 구현
-    const handleSearch = () => {
-        alert(text);
+    const handleSearch = target => {
+        setText(target);
     };
 
     return (
         <Layout title="Dictionary">
-            <GradientTop/>
-            <Container>
-                <DictionarySearch setText={setText} handleSearch={handleSearch}/>
-                <TypeNav>
-                    <Type>바다</Type>
-                    <TypeBetween>민물</TypeBetween>
-                    <Type>수온</Type>
-                    <TypeBetween>크기</TypeBetween>
-                    <Type>성격</Type>
-                </TypeNav>
-                <ItemContainer>
-                    {data && Object.values(data).map((fish) => {
-                        return (
-                            // todo 온클릭 이벤트 구현
-                            <FishCard
-                                key={fish.num}
-                                name={fish.name}
-                                imgSrc={`imgs/aquamate/${fish.img}`}
-                            />
-                        )
-                    })}
-                </ItemContainer>
-            </Container>
-            <GradientBottom/>
+            <Gradient>
+                <Container>
+                    <DictionarySearch handleSearch={handleSearch}/>
+                    <TypeNav>
+                        <Type>바다</Type>
+                        <TypeBetween>민물</TypeBetween>
+                        <Type>수온</Type>
+                        <TypeBetween>크기</TypeBetween>
+                        <Type>성격</Type>
+                    </TypeNav>
+                    <ItemContainer>
+                        {data && Object.values(data).map((fish) => {
+                            if (fish.name.includes(text))
+                                return (
+                                    <FishCard
+                                        key={fish.num}
+                                        fish={fish}
+                                    />
+                                )
+                        })}
+                    </ItemContainer>
+                </Container>
+            </Gradient>
         </Layout>
     )
 }

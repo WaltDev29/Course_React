@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import DictionaryPage from "./Final_Exam/Page/DictionaryPage";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <DictionaryPage/>
+        <App/>
     </React.StrictMode>
 );
 

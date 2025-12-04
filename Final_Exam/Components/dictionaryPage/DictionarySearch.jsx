@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
+    display: inline-flex;
+    align-items: center;
     color: white;
     padding: 7px;
     font-weight: bold;
@@ -28,16 +30,24 @@ const Input = styled.input`
     outline: none;
 `;
 
-export default function DictionarySearch({setText, handleSearch}) {
+export default function DictionarySearch({handleSearch}) {
+    const [text, setText] = useState("");
+
+    const handleKeyDown = e => {
+        if (e.key === "Enter") handleSearch(text)
+    }
+
     return (
         <div>
-            {/* todo 필터 아이콘 중앙 정렬 */}
             <Button>
                 Filter
                 <Img src="/imgs/aquamate/filter.png"/>
             </Button>
-            <Input type="text" onChange={e => setText(e.target.value)} />
-            <Button onClick={handleSearch}>Search</Button>
+            <Input type="text"
+                   onChange={e => setText(e.target.value)}
+                   onKeyDown={e => handleKeyDown(e)}
+            />
+            <Button onClick={() => handleSearch(text)}>Search</Button>
         </div>
     )
 }

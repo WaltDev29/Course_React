@@ -52,7 +52,7 @@ export default function DictionaryPage() {
             try {
                 const res = await fetch("/data/data_fish.json");
                 const json = await res.json();
-                setData(json);
+                setData(Object.values(json));
                 setFishList(Object.values(json));
             } catch (err) {
                 console.error(err);
@@ -66,7 +66,7 @@ export default function DictionaryPage() {
     const handleSearch = (target) => {
         if (!data) return;
 
-        setFishList(Object.values(data).filter(item =>
+        setFishList(data.filter(item =>
             item.name.includes(target)
         ));
     };

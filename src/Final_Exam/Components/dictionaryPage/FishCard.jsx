@@ -10,6 +10,7 @@ const Card = styled.article`
     margin: 20px 10px;
     border: 1px solid rgb(187, 187, 187);
     border-radius: 10px;
+    background-color: white;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s;
@@ -55,10 +56,10 @@ const Img = styled.img`
 export default function FishCard({fish}) {
     const navigate = useNavigate();
 
-    const [star,setStar] = useState(false);
+    const [star, setStar] = useState(false);
 
     return (
-        <Card onClick={() => navigate("/fishInfo", {state : fish})}>
+        <Card onClick={() => navigate("/fishInfo", {state: fish})}>
             <Head>
                 <Label>{fish.name}</Label>
                 <StarBox
@@ -66,7 +67,8 @@ export default function FishCard({fish}) {
                     onClick={e => {
                         e.stopPropagation();
                         setStar(!star)
-                    }}/>
+                    }}
+                />
             </Head>
             <Img src={`/imgs/aquamate/${fish.img}`} alt={fish.name}/>
         </Card>

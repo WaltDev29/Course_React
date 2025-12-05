@@ -5,7 +5,7 @@ const Container = styled.div`
     margin-left: 50px;
 `;
 
-const Label = styled.div`
+const Label = styled.h3`
     margin-bottom: 0;
     color: rgb(0, 50, 116);
 `;

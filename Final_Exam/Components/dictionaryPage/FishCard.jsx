@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
 
@@ -13,6 +13,10 @@ const Card = styled.article`
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
 const Head = styled.div`
@@ -36,7 +40,7 @@ const StarBox = styled.div`
     background-color: #009DFF;
     margin: 5px;
     border-radius: 4px;
-    background-image: url("/imgs/aquamate/Star.png");
+    background-image: url("/imgs/aquamate/${props => props.star}.png");
     background-position: center;
     background-size: 95%;
     background-repeat: no-repeat;
@@ -51,11 +55,18 @@ const Img = styled.img`
 export default function FishCard({fish}) {
     const navigate = useNavigate();
 
+    const [star,setStar] = useState(false);
+
     return (
         <Card onClick={() => navigate("/fishInfo", {state : fish})}>
             <Head>
                 <Label>{fish.name}</Label>
-                <StarBox/>
+                <StarBox
+                    star={star ? "star_yellow" : "star"}
+                    onClick={e => {
+                        e.stopPropagation();
+                        setStar(!star)
+                    }}/>
             </Head>
             <Img src={`/imgs/aquamate/${fish.img}`} alt={fish.name}/>
         </Card>

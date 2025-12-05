@@ -19,7 +19,6 @@ const Img = styled.img`
 `;
 
 export default function NavLabel(props) {
-    // todo a 태그 기본 스타일 제거 (밑줄)
     return (
         <Container href={props.href} style={{pointerEvents: props.href ? "auto" : "none"}}>
             {props.imgSrc && <Img src={props.imgSrc}/>}

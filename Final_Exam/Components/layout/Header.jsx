@@ -1,6 +1,7 @@
 import React from "react";
 import NavBtn from "./NavBtn";
 import styled from "styled-components";
+import {useNavigate} from "react-router-dom";
 
 const Wrapper = styled.header`
     display: flex;
@@ -17,8 +18,7 @@ const LogoImg = styled.img`
     width: 200px;
 `;
 
-// todo 버튼 애니메이션 적용
-const CurPageIcon = styled.a`
+const CurPageIcon = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +35,10 @@ const CurPageBtn = styled.button`
     background: linear-gradient(135deg, rgb(0, 187, 255) 0%, rgb(0, 187, 255) 50%, rgb(1, 73, 255) 100%);
     cursor: pointer;
     transition: all 0.5s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
 const CurPageImg = styled.img`
@@ -50,36 +54,36 @@ const Nav = styled.nav`
     grid-template-columns: 1fr 1fr 1fr;
 `;
 
-// todo 클릭 이벤트 구현
-const handleNavClick = (direction) => {
-    alert(direction)
-}
-
 export default function Header({title, mainImgSrc}) {
+    const navigate = useNavigate();
+
     return (
         <Wrapper>
-            <Logo>
+            <Logo onClick={() => navigate("/")}>
                 <LogoImg src="/imgs/aquamate/logo.png"/>
             </Logo>
             <CurPageIcon>
-                <CurPageBtn>
+                <CurPageBtn onClick={() => navigate(`/${title}`)}>
                     <CurPageImg src={`/imgs/aquamate/${mainImgSrc}.png`}/>
                 </CurPageBtn>
                 <CurpageLabel>{title}</CurpageLabel>
             </CurPageIcon>
             <Nav>
                 <NavBtn
-                    handleNavClick={() => handleNavClick("dictionary")}
+                    className=""
+                    handleNavClick={() => navigate("/dictionary")}
                     imgSrc="/imgs/aquamate/book.png"
                     title="Dictionary"
                 />
                 <NavBtn
-                    handleNavClick={() => handleNavClick("match")}
+                    className=""
+                    handleNavClick={() => navigate("/match")}
                     imgSrc="/imgs/aquamate/heart.png"
                     title="Match"
                 />
                 <NavBtn
-                    handleNavClick={() => handleNavClick("about")}
+                    className=""
+                    handleNavClick={() => navigate("/about")}
                     imgSrc="/imgs/aquamate/bookmark.png"
                     title="About"
                 />

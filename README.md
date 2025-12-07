@@ -63,7 +63,7 @@
 ## 🔍 웹사이트 링크  
 <br>
 
-👉 [**Click Here!**]([https://waltdev29.github.io/AquaMate/](http://aquamate.s3-website.ap-northeast-2.amazonaws.com/)
+👉 [**Click Here!**](http://aquamate.s3-website.ap-northeast-2.amazonaws.com/)
 
 <br>
 

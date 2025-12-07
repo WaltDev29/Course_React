@@ -1,7 +1,8 @@
 import React from "react";
+import styled from "styled-components";
+
 import Layout from "../Components/layout/Layout";
 import Gradient from "../Components/layout/Gradient";
-import styled from "styled-components";
 
 const Container = styled.div`
     width: 100%;
@@ -17,6 +18,11 @@ const Nav = styled.nav`
     flex-direction: row;
     width: 90%;
     justify-content: space-between;
+    
+    @media (max-width: 500px) {
+        margin: -10px;
+        margin-bottom: -50px;
+    }
 `;
 
 const NavLabel = styled.a`
@@ -30,6 +36,16 @@ const NavLabel = styled.a`
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+    
+    @media (max-width: 730px) {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    @media (max-width: 500px) {
+        margin-top: 0;
+        font-size: 0.9rem;
+    }
 
     &.center {
         border-left: 1px solid rgb(0, 183, 255);
@@ -47,12 +63,27 @@ const MainContainer = styled.div`
     width: 100%;
     flex-wrap: wrap;
     border-top: 1px solid rgb(0, 97, 136);
+    
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 `;
 
 const Wrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgb(112, 140, 177);
+    }
+    
+    &:last-child {
+        border: none;
+    }
 `;
 
 const Img = styled.img`
@@ -60,11 +91,27 @@ const Img = styled.img`
     margin: 50px;
     width: 400px;
     border: 1px solid rgb(207, 207, 207);
+    
+    @media (max-width: 800px) {
+        float: unset;
+        margin: 20px;
+        margin-top: 80px;
+        margin-bottom: 0;
+        width: 80%;
+    }
 `;
 
 const Description = styled.div`
     width: 30%;
     margin-left: 50px;
+    
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+    
+    @media (max-width: 500px) {
+        margin-left: 0;
+    }
 `;
 
 const Label = styled.h1`
@@ -72,6 +119,10 @@ const Label = styled.h1`
     font-size: 2rem;
     color: rgb(0, 183, 255);
     margin-bottom: 0;
+    
+    @media (max-width: 800px) {
+        margin-top: 10px;
+    }
 `;
 
 const SubLabel = styled.p`

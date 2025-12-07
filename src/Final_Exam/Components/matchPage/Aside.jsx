@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
+
 import AsideCard from "./AsideCard";
 
 const Container = styled.aside`
@@ -11,6 +12,14 @@ const Container = styled.aside`
 const SearchContainer = styled.div`
     border-bottom: 1px solid rgba(164, 219, 255, 0.568);
     padding-bottom: 15px;
+    
+    @media (max-width: 730px) {
+        margin: 0 50px;
+    }
+    
+    @media (max-width: 600px) {
+        margin: 0 0;
+    }
 `;
 
 const ItemContainer = styled.div`
@@ -20,6 +29,16 @@ const ItemContainer = styled.div`
     margin-top: 20px;
     height: 600px;
     overflow-y: auto;
+
+    @media (max-width: 900px) {
+        margin-top: 0;
+        height: 600px;
+        overflow-y: auto;
+    }
+    
+    @media (max-width: 500px) {
+        width: 100%;
+    }
 `;
 
 const Group = styled.div`
@@ -29,6 +48,11 @@ const Group = styled.div`
     justify-content: center;
     padding: 0 20px;
     margin-top: 15px;
+    
+    @media (max-width: 900px) {
+        display: flex;
+        justify-content: space-between;
+    }
 `;
 
 const Button = styled.button`
@@ -44,6 +68,10 @@ const Button = styled.button`
     border-radius: 12px;
     background: linear-gradient(135deg, rgb(0, 187, 255) 0%, rgb(0, 187, 255) 50%, rgb(1, 73, 255) 100%);
     cursor: pointer;
+    
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
 `;
 
 const Input = styled.input`
@@ -54,6 +82,10 @@ const Input = styled.input`
     background-color: white;
     border-radius: 8px;
     font-size: 1.2rem;
+    
+    @media (max-width: 730px) {
+        font-size: 0.9rem;
+    }
 `;
 
 const Select = styled.select`

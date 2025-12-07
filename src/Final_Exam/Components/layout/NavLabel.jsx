@@ -11,11 +11,24 @@ const Container = styled.a`
     transition: all 0.5s;
     color: white;
     text-decoration: none;
+    
+    @media (max-width: 730px) {
+        margin: 0 5px;
+    }
+    
+    @media (max-width: 500px) {
+        font-size: 12px;
+        margin-top: 5px;
+    }
 `;
 
 const Img = styled.img`
     width: 25px;
     margin-right: 10px;
+    
+    @media (max-width: 500px) {
+        width: 20px;
+    }
 `;
 
 export default function NavLabel(props) {

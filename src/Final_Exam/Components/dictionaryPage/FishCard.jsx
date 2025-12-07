@@ -18,6 +18,18 @@ const Card = styled.article`
     &:hover {
         transform: scale(1.1);
     }
+    
+    &.match {
+        @media (max-width: 600px) {
+            width: 110px;
+            height: 140px;
+        }
+        
+        @media (max-width: 500px) {
+            width: 100px;
+            height: 120px;
+        }
+    }
 `;
 
 const Head = styled.div`
@@ -33,6 +45,12 @@ const Label = styled.h3`
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    
+    &.match {
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
+    }
 `;
 
 const StarBox = styled.div`
@@ -53,15 +71,15 @@ const Img = styled.img`
     height: 100%;
 `;
 
-export default function FishCard({fish}) {
+export default function FishCard({fish, className}) {
     const navigate = useNavigate();
 
     const [star, setStar] = useState(false);
 
     return (
-        <Card onClick={() => navigate("/fishInfo", {state: fish})}>
+        <Card className={className} onClick={() => navigate("/fishInfo", {state: fish})}>
             <Head>
-                <Label>{fish.name}</Label>
+                <Label className={className}>{fish.name}</Label>
                 <StarBox
                     star={star ? "star_yellow" : "star"}
                     onClick={e => {

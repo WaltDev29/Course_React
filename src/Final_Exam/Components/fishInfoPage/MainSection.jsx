@@ -4,6 +4,14 @@ import styled from "styled-components";
 const Container = styled.div`
     display: flex;
     border-bottom: 1px solid #3b5388;
+    
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 `;
 
 const Img = styled.img`
@@ -13,16 +21,40 @@ const Img = styled.img`
     height: 400px;
     border: 1px solid rgb(207, 207, 207);
     border-radius: 10px;
+    
+    @media (max-width: 1000px) {
+        float: unset;
+        margin: 20px;
+        margin-top: 80px;
+        width: 50%;
+        height: auto;
+    }
+    
+    @media (max-width: 730px) {
+        margin-top: 10px;
+    }
 `;
 
 const MainInfo = styled.div`
     margin-left: 50px;
+    
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
+    
+    @media (max-width: 730px) {
+        margin-left: 0;
+    }
 `;
 
 const Name = styled.h1`
     margin-top: 50px;
     font-size: 2rem;
     margin-bottom: 0;
+    
+    @media (max-width: 1000px) {
+        margin-top: 10px;
+    }
 `;
 
 const InfoLabel = styled.h3`

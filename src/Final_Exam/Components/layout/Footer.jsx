@@ -1,6 +1,7 @@
 import React from "react";
-import NavLabel from "./NavLabel";
 import styled from "styled-components";
+
+import NavLabel from "./NavLabel";
 
 const Wrapper = styled.nav`
     display: flex;
@@ -10,16 +11,32 @@ const Wrapper = styled.nav`
     padding: 0 20px;
     color: white;
     border-top: 1px solid white;
+    
+    @media (max-width: 730px) {
+        flex-direction: column;
+    }
+    
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
 `;
 
 const Label = styled.span`
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    
+    @media (max-width: 500px) {
+    font-size: 15px;
+}
 `;
 
 const Nav = styled.div`
     display: flex;
     align-items: center;
     margin: 20px auto;
+    
+    @media (max-width: 730px) {
+        margin: 10px auto;
+    }
 `;
 
 export default function Footer() {

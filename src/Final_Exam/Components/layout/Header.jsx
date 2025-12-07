@@ -1,13 +1,18 @@
 import React from "react";
-import NavBtn from "./NavBtn";
-import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
+import styled from "styled-components";
+
+import NavBtn from "./NavBtn";
 
 const Wrapper = styled.header`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
 `;
 
 const Logo = styled.a`
@@ -25,6 +30,10 @@ const CurPageIcon = styled.div`
     justify-content: center;
     color: white;
     margin-top: 20px;
+    
+    @media (max-width: 730px) {
+        display: none;
+    }
 `;
 
 const CurPageBtn = styled.button`
@@ -52,6 +61,11 @@ const CurpageLabel = styled.h1`
 const Nav = styled.nav`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    
+    @media (max-width: 500px) {
+        margin: -10px;
+        margin-bottom: -50px;
+    }
 `;
 
 export default function Header({title, mainImgSrc}) {

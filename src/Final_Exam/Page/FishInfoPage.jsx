@@ -1,8 +1,9 @@
 import React, {useEffect} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
+import styled from "styled-components";
+
 import Layout from "../Components/layout/Layout";
 import Gradient from "../Components/layout/Gradient";
-import styled from "styled-components";
-import {useLocation, useNavigate} from "react-router-dom";
 
 import MainSection from "../Components/fishInfoPage/MainSection";
 import SpecSection from "../Components/fishInfoPage/SpecSection";
@@ -21,6 +22,10 @@ const Wrapper = styled.div`
     justify-content: center;
     width: 80%;
     flex-wrap: wrap;
+    
+    @media (max-width: 500px) {
+        width: 98%;
+    }
 `;
 
 export default function FishInfoPage() {

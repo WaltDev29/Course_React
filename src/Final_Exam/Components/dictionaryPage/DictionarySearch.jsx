@@ -12,6 +12,10 @@ const Button = styled.button`
     border-radius: 12px;
     background: linear-gradient(135deg, rgb(0, 187, 255) 0%, rgb(0, 187, 255) 50%, rgb(1, 73, 255) 100%);
     cursor: pointer;
+    
+    @media (max-width: 730px) {
+        font-size: 15px;
+    }
 `;
 
 const Img = styled.img`
@@ -28,6 +32,13 @@ const Input = styled.input`
     border-radius: 8px;
     font-size: 1.2rem;
     outline: none;
+    
+    @media (max-width: 730px) {
+        width: 50%;
+        margin: 10px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
 `;
 
 export default function DictionarySearch({handleSearch}) {

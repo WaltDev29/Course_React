@@ -6,6 +6,10 @@ const Wrapper = styled.a`
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+
+    @media (max-width: 500px) {
+        margin: 0;
+    }
 `;
 
 const Button = styled.button`
@@ -16,16 +20,28 @@ const Button = styled.button`
     background: linear-gradient(135deg, rgb(0, 187, 255) 0%, rgb(0, 187, 255) 50%, rgb(1, 73, 255) 100%);
     cursor: pointer;
     transition: all 0.5s;
-    
+
     &:hover {
         transform: scale(1.1);
     }
-    
+
     &.userHome {
         margin: 0 15px;
         width: 90px;
         height: 90px;
         border: 3px solid white;
+
+        @media (max-width: 500px) {
+            margin: 0 10px;
+            width: 70px;
+            height: 70px;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        margin: 0 10px;
+        width: 60px;
+        height: 60px;
     }
 `;
 
@@ -40,6 +56,15 @@ const Label = styled.h3`
     
     &.userHome {
         font-size: 1.3rem;
+        
+        @media (max-width: 500px) {
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        margin-top: 0;
+        font-size: 0.9rem;
     }
 `;
 

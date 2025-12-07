@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
-import Layout from "../Components/layout/Layout";
-import DictionarySearch from "../Components/dictionaryPage/DictionarySearch";
 import styled from "styled-components";
-import FishCard from "../Components/dictionaryPage/FishCard";
+
+import Layout from "../Components/layout/Layout";
 import Gradient from "../Components/layout/Gradient";
+import DictionarySearch from "../Components/dictionaryPage/DictionarySearch";
+import FishCard from "../Components/dictionaryPage/FishCard";
 
 const Container = styled.div`
     width: 100%;
@@ -28,6 +29,15 @@ const Type = styled.h3`
     padding: 0 50px;
     cursor: pointer;
 
+    @media (max-width: 730px) {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    @media (max-width: 500px) {
+        font-size: 1rem;
+    }
+    
     &.border {
         border-left: 1px solid rgb(0, 183, 255);
         border-right: 1px solid rgb(0, 183, 255);
@@ -41,6 +51,10 @@ const ItemContainer = styled.div`
     width: 90%;
     flex-wrap: wrap;
     min-height: 350px;
+    
+    @media (max-width: 500px) {
+        width: 100%;
+    }
 `;
 
 export default function DictionaryPage() {

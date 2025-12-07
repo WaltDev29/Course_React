@@ -3,6 +3,14 @@ import styled from "styled-components";
 
 const Container = styled.div`
     margin-left: 50px;
+    
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
+    
+    @media (max-width: 730px) {
+        margin-left: 0;
+    }
 `;
 
 const Label = styled.h3`
